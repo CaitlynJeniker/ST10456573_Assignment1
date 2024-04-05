@@ -17,15 +17,13 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.TextView) // Define textView
 
 
-        clearButton.setOnClickListener {
-            ageText.text.clear()
-            resultView.text=""
-        }
+
+
 
         button.setOnClickListener {
             val userAgeString = findViewById<EditText>(R.id.TextNumberEnterYourAge).text.toString()
             val userAge = userAgeString.toIntOrNull()
-        }
+
 
 
             // Create a HashMap to store historical figures and their ages at death
@@ -42,25 +40,25 @@ class MainActivity : AppCompatActivity() {
                 "Christiaan Neethling Barnard-was a South African cardiac surgeon who performed the world's first human-to-human heart transplant operation" to 78
             )
 
-            if (userAge != null) {
-                // Find historical figures who died at the same age as the user
-                val matchedFigures = historicalAges.filterValues { it == userAge }.keys
+        if (userAge != null) {
+            // Find historical figures who died at the same age as the user
+            val matchedFigures = historicalAges.filterValues { it == userAge }.keys
 
-                if (matchedFigures.isNotEmpty()) {
-                    val result = StringBuilder()
-                    result.append("You share the same age as the following historical figures:\n")
-                    matchedFigures.forEach { result.append("$it\n") }
-                    textView.text = result.toString()
-                } else {
-                    textView.text =
-                        "There are no historical figures who died at the age of $userAge."
-                }
+            if (matchedFigures.isNotEmpty()) {
+                val result = StringBuilder()
+                result.append("You share the same age as the following historical figures:\n")
+                matchedFigures.forEach { result.append("$it\n") }
+                textView.text = result.toString()
+            } else {
+                textView.text =
+                    "There are no historical figures who died at the age of $userAge."
             }
-
-
         }
 
-        fun main(textView: TextView) {
+
+    }
+
+    fun main(textView: TextView) {
             // Create a HashMap to store historical figures and their ages at death
             val historicalAges = hashMapOf(
                 "Leonardo da Vinci" to 67,
@@ -92,3 +90,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
