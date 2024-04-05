@@ -1,3 +1,6 @@
+package com.example.st10456573_assignment1
+
+
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -8,7 +11,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class MYunittest {
+class UnitTest {
 
     @Test
     fun testButtonClicked() {
