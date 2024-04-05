@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IMAD511-A1</string>
+    <string name="Welcome">Welcome</string>
+    <string name="textHint">Enter your age</string>
+    <string name="buttontext">Clear</string>
+    <string name="button2text">Generate history</string>
+</resources>
